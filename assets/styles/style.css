@@ -100,6 +100,12 @@ body {
   background-color: #cccccc;
 }
 
+@media (max-width: 375px) {
+  .aside-menu {
+    display: none;
+  }
+}
+
 .aside-menu__navigation {
   margin: 12px 12px 0 12px;
 }
@@ -136,6 +142,115 @@ body {
   text-decoration: underline;
 }
 
+.burger-wrapper {
+  display: none;
+  position: relative;
+}
+
+@media (max-width: 375px) {
+  .burger-wrapper {
+    display: block;
+  }
+}
+
+.burger-wrapper #check-menu {
+  display: none;
+}
+
+.burger-wrapper #check-menu:checked ~ .nav-burger {
+  max-height: 500px;
+}
+
+.burger-wrapper #check-menu:checked ~ .first {
+  display: none;
+}
+
+.burger-wrapper #check-menu:checked ~ .second {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger-wrapper #check-menu:checked ~ .third {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.burger-wrapper #check-menu:checked ~ .fourth {
+  display: none;
+}
+
+.toggle-burger {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  z-index: 2;
+}
+
+.burger-line {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 2px;
+  width: 30px;
+  background-color: #383838;
+}
+
+.second, .third {
+  top: 25px;
+  left: 10px;
+}
+
+.fourth {
+  top: 38px;
+}
+
+.nav-burger {
+  display: block;
+  position: absolute;
+  max-height: 0;
+  top: 40px;
+  left: 0px;
+  width: 210px;
+  height: 230px;
+  overflow: hidden;
+  -webkit-transition: 0.7s all;
+  transition: 0.7s all;
+  background-color: #cccccc;
+}
+
+.burger-menu__list {
+  padding: 0;
+  margin-left: 5px;
+  width: 200px;
+  height: 210px;
+  background-color: #383838;
+}
+
+.burger-menu__item {
+  height: 35px;
+  text-align: center;
+}
+
+.burger-menu__link {
+  display: block;
+  line-height: 35px;
+  color: white;
+  text-decoration: none;
+  width: 200px;
+}
+
+.burger-menu__item-active {
+  background-color: white;
+}
+
+.burger-menu__link-active {
+  color: #383838;
+  text-decoration: underline;
+}
+
 .info-content {
   max-width: 560px;
 }
@@ -149,9 +264,15 @@ body {
   margin: 0 0 16px 0;
 }
 
+@media (max-width: 375px) {
+  .main-info-container__title {
+    margin: 10px 0 5px 45px;
+  }
+}
+
 .main-info-container__text {
   font-size: 12px;
-  margin: 0;
+  margin: 20px 0;
 }
 
 .main-info-list__title {

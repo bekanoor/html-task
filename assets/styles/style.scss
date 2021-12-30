@@ -94,6 +94,10 @@ $primary-black: #383838;
     flex: 0 1 33.3%;
     background-color: $primary-light-gray;
 
+    @media(max-width: 375px) {
+        display: none;
+    } 
+
     &__navigation {
         margin: 12px 12px 0 12px;
     }
@@ -130,6 +134,113 @@ $primary-black: #383838;
         text-decoration: underline;
     }
 }
+.burger-wrapper {
+    display: none;
+    position: relative;
+    
+    @media(max-width: 375px){
+        display: block;
+    }
+
+    #check-menu {
+        
+        display: none;    
+    }
+
+    #check-menu:checked ~.nav-burger {
+        max-height: 500px;
+    }
+
+    #check-menu:checked ~.first {
+        display: none;
+    }
+
+    #check-menu:checked ~.second {
+        transform: rotate(45deg);
+    }
+
+    #check-menu:checked ~.third {
+        transform: rotate(-45deg);
+    }
+
+    #check-menu:checked ~.fourth {
+        display: none;
+    }
+}
+.toggle-burger {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    
+    width: 35px;
+    height: 35px;
+    
+    opacity: 0;
+    z-index: 2;
+  
+}
+.burger-line {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    height: 2px;
+    width: 30px;
+    background-color: $primary-black;
+
+}
+.second, .third {
+    top: 25px;
+    left: 10px;
+}
+
+.fourth {
+    top: 38px;
+}
+.nav-burger {
+    display: block;
+    position: absolute;
+    max-height: 0;
+    top: 40px;
+    left: 0px;
+    width: 210px;
+    height: 230px;
+    overflow: hidden;
+    transition: 0.7s all;
+    background-color: $primary-light-gray;
+}
+
+.burger-menu {
+		&__list {
+            padding: 0;
+            margin-left: 5px;
+            width: 200px;
+            height: 210px;
+            background-color: $primary-black;
+		}
+
+		&__item {
+            height: 35px;
+            text-align: center;
+		}
+
+		&__link {
+            display: block;
+            line-height: 35px;
+            color: white;
+            text-decoration: none;
+            width: 200px;
+		}
+
+		&__item-active {
+            background-color: white;
+		}
+
+        &__link-active {
+            color: $primary-black;
+            text-decoration: underline;
+        }
+}
 
 .info-content {
     max-width: 560px;
@@ -143,11 +254,15 @@ $primary-black: #383838;
     &__title {
         font-weight: 400;
         margin: 0 0 16px 0;
+
+        @media(max-width: 375px) {
+            margin: 10px 0 5px 45px;
+        }
     }
 
     &__text {
         font-size: 12px;
-        margin: 0;
+        margin: 20px 0;
     }
 }
 .main-info-list {
@@ -155,14 +270,7 @@ $primary-black: #383838;
         font-weight: 400;
     }
 }
-.list {
-    
-    &__item {
-    }
 
-    &__link {
-    }
-}
 .footer {
     height: 25px;
     max-width: 800px;
