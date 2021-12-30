@@ -1,1 +1,166 @@
-/* No CSS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.header {
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100px;
+  background-color: #cccccc;
+}
+
+.header__wrapper {
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0 0 10px;
+}
+
+.header__square {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+}
+
+.header__text-wrapper {
+  margin-left: 12px;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+  color: #7a7a7a;
+}
+
+.header__subtitle {
+  margin: 0;
+  color: #7a7a7a;
+}
+
+.main {
+  max-width: 800px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.navigation-block {
+  height: 30px;
+  background-color: #383838;
+}
+
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__item {
+  list-style-type: none;
+}
+
+.navigation__link {
+  display: inline-block;
+  height: 30px;
+  width: 105px;
+  padding-left: 12px;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.navigation__link-active {
+  background-color: white;
+  color: #383838;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+}
+
+.aside-menu {
+  display: block;
+  height: 300px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3%;
+          flex: 0 1 33.3%;
+  background-color: #cccccc;
+}
+
+.aside-menu__navigation {
+  margin: 12px 12px 0 12px;
+}
+
+.aside-menu__list {
+  background-color: #383838;
+  height: 212px;
+  max-width: 205px;
+  padding: 0;
+  margin: 0;
+}
+
+.aside-menu__item {
+  height: 35px;
+  max-width: 200px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.aside-menu__item-active {
+  max-width: 205px;
+  background-color: white;
+}
+
+.aside-menu__link {
+  display: inline-block;
+  line-height: 35px;
+  color: white;
+  text-decoration: none;
+}
+
+.aside-menu__link-active {
+  color: #383838;
+  text-decoration: underline;
+}
+
+.info-content {
+  max-width: 560px;
+}
+
+.info-content__wrapper {
+  margin: 0px 10px;
+}
+
+.main-info-container__title {
+  font-weight: 400;
+  margin: 0 0 16px 0;
+}
+
+.main-info-container__text {
+  font-size: 12px;
+  margin: 0;
+}
+
+.main-info-list__title {
+  font-weight: 400;
+}
+
+.footer {
+  height: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #383838;
+}

@@ -9,66 +9,109 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__square"></div>
-      <h1 class="header__title">EPAM SYSTEMS</h1>
-      <p class="header__subtitle">UI LAB TRAINING</p>
+      <div class="header__wrapper">
+        <div class="header__square"></div>
+        <div class="header__text-wrapper">
+          <h1 class="header__title">EPAM SYSTEMS</h1>
+          <p class="header__subtitle">UI LAB TRAINING</p>
+        </div>
+      </div>
     </header>
     <main class="main">
       <section class="navigation-block">
         <nav class="navigation">
-          <a href="#" class="navigation__link">About UI lab</a>
-          <a href="#" class="navigation__link">Home Tasks</a>
-          <a href="#" class="navigation__link">Tests & Exams</a>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">About UI lab</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link navigation__link-active">Home Tasks</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Tests & Exams</a>
+            </li>
+          </ul>
         </nav>
       </section>
       <section class="main-content">
         <aside class="aside-menu">
-          <nav class="aside-navigation">
-            <a href="" class="aside-navigation__item"
-              >Vertical navigation sample</a
-            >
-            <a href="" class="aside-navigation__item"
-              >Vertical navigation sample</a
-            >
-            <a href="" class="aside-navigation__item"
-              >Vertical navigation sample</a
-            >
-            <a href="" class="aside-navigation__item"
-              >Vertical navigation sample</a
-            >
-            <a href="" class="aside-navigation__item"
-              >Vertical navigation sample</a
-            >
-            <a href="" class="aside-navigation__item"
-              >Vertical navigation sample</a
-            >
+          <nav class="aside-menu__navigation">
+            <ul class="aside-menu__list">
+              <li class="aside-menu__item">
+                <a href="" class="aside-menu__link">
+                  Vertical navigation sample
+                </a>
+              </li>
+              <li class="aside-menu__item">
+                <a href="" class="aside-menu__link">
+                  Vertical navigation sample
+                </a>
+              </li>
+              <li class="aside-menu__item aside-menu__item-active">
+                <a href="" class="aside-menu__link aside-menu__link-active">
+                  Vertical navigation sample
+                </a>
+              </li>
+              <li class="aside-menu__item">
+                <a href="" class="aside-menu__link">
+                  Vertical navigation sample
+                </a>
+              </li>
+              <li class="aside-menu__item">
+                <a href="" class="aside-menu__link">
+                  Vertical navigation sample
+                </a>
+              </li>
+              <li class="aside-menu__item">
+                <a href="" class="aside-menu__link">
+                  Vertical navigation sample
+                </a>
+              </li>
+            </ul>
           </nav>
         </aside>
         <div class="info-content">
-          <div class="main-info-container">
-            <h2 class="main-info-container__title">Level 2 Heading</h2>
-            <p class="main-info-container__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              scelerisque placerat arcu, eget dapibus sem ultrices consectetur.
-              Aliquam sed volutpat tellus. Sed quis faucibus tellus. Sed
-              porttitor est ac augue dictum in mattis felis venenatis. Morbi sem
-              ipsum, laoreet in sagittis sed, pulvinar sit amet est. Phasellus
-              commodo, dui vitae eleifend volutpat, elit lacus ullamcorper
-              justo, at porta neque felis eu nibh. Vivamus sodales eleifend
-              tortor eu mollis. In hac habitasse platea dictumst. Pellentesque
-              fermentum ligula sit amet erat dapibus non fringilla nisl iaculis.
-            </p>
-          </div>
-          <div class="main-info-list">
+          <div class="info-content__wrapper">
+            <article class="main-info-container">
+              <h2 class="main-info-container__title">Level 2 Heading</h2>
+              <p class="main-info-container__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                scelerisque placerat arcu, eget dapibus sem ultrices consectetur.
+                Aliquam sed volutpat tellus. Sed quis faucibus tellus. Sed
+                porttitor est ac augue dictum in mattis felis venenatis. Morbi sem
+                ipsum, laoreet in sagittis sed, pulvinar sit amet est. Phasellus
+                commodo, dui vitae eleifend volutpat, elit lacus ullamcorper
+                justo, at porta neque felis eu nibh. Vivamus sodales eleifend
+                tortor eu mollis. In hac habitasse platea dictumst. Pellentesque
+                fermentum ligula sit amet erat dapibus non fringilla nisl iaculis.
+              </p>
+            </article>
+            <article class="main-info-list">
+              <h3 class="main-info-list__title">Level 3 heading</h3>
               <ul class="list">
-                <li class="list__item">Basic list Sample</li>
-                <li class="list__item">Basic list Sample</li>
-                <li class="list__item">Basic list Sample</li>
-                <li class="list__item">Basic list Sample</li>
-                <li class="list__item">Basic list Sample</li>
-                <li class="list__item">Basic list Sample</li>
-                <li class="list__item">Basic list Sample</li>
-            </ul>
+                <li class="list__item">
+                  Basic list Sample
+                </li>
+                <li class="list__item">
+                  Basic list Sample
+                </li>
+                <li class="list__item">
+                  Basic list Sample
+                </li>
+                <li class="list__item">
+                  Basic list Sample
+                </li>
+                <li class="list__item">
+                  Basic list Sample
+                </li>
+                <li class="list__item">
+                  Basic list Sample
+                </li>
+                <li class="list__item">
+                  Basic list Sample
+                </li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
