@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 $primary-gray: #7a7a7a;
@@ -14,266 +14,274 @@ $primary-light-gray: #cccccc;
 $primary-black: #383838;
 
 .header {
-    max-width: 800px;
-    margin: 0 auto;
-    height: 100px;
-    background-color: $primary-light-gray;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100px;
+  background-color: $primary-light-gray;
 
-    &__wrapper {
-        height: 90px;
-        display: flex;
-        padding: 10px 0 0 10px;
-    }
+  &__wrapper {
+    height: 90px;
+    display: flex;
+    padding: 10px 0 0 10px;
+  }
 
-    &__square {
-        width: 70px;
-        height: 70px;
-        background-color: white;
-    }
+  &__square {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+  }
 
-    &__text-wrapper {
-        margin-left: 12px;
-    }
+  &__text-wrapper {
+    margin-left: 12px;
+  }
 
-    &__title {
-        margin: 0;
-        font-size: 28px;
-        font-weight: 400;
-        color: $primary-gray;
-    }
+  &__title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 400;
+    color: $primary-gray;
 
-    &__subtitle {
-        margin: 0;
-        color: $primary-gray;
+    @media (max-width: 320px) {
+      font-size: 24px;
     }
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: $primary-gray;
+  }
 }
 
 .main {
-    max-width: 800px;
-    height: 500px;
-    margin: 0 auto;
+  max-width: 800px;
+  height: 500px;
+  margin: 0 auto;
 }
-.navigation-block {
-    height: 30px;
-    background-color: $primary-black;
-}
+
 .navigation {
+  height: 30px;
+  background-color: $primary-black;
 
-    &__list {
-        display: flex;
-        padding: 0;
-        margin: 0;
-    }
-    &__item {
-        list-style-type: none;
-    }
+  &__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    list-style-type: none;
+    text-align: center;
+  }
 
-    &__link {
-        display: inline-block;
-        height: 30px;
-        width: 105px;
-        padding-left: 12px;
-        line-height: 30px;
-        color: white;
-        text-decoration: none;
-    }
+  &__link {
+    display: inline-block;
+    height: 30px;
+    width: 105px;
+    line-height: 30px;
+    color: white;
+    text-decoration: none;
 
-    &__link-active {
-        background-color: white;
-        color: $primary-black;
+    @media (max-width: 320px) {
+      font-size: 12px;
+      width: 80px;
     }
+  }
+
+  &__link-active {
+    background-color: white;
+    color: $primary-black;
+  }
 }
 .main-content {
-    display: flex;
-    padding-top: 10px;
+  display: flex;
+  padding-top: 10px;
 }
 
 .aside-menu {
-    display: block;
-    height: 300px;
-    flex: 0 1 33.3%;
-    background-color: $primary-light-gray;
+  display: block;
+  height: 300px;
+  flex: 0 1 28%;
+  background-color: $primary-light-gray;
 
-    @media(max-width: 375px) {
-        display: none;
-    } 
+  @media (max-width: 375px) {
+    display: none;
+  }
 
-    &__navigation {
-        margin: 12px 12px 0 12px;
-    }
-    
-    &__list {
-        background-color: $primary-black;
-        height: 212px;
-        max-width: 205px;
-        padding: 0;
-        margin: 0;
-    }
+  &__navigation {
+    margin: 12px 12px 0 12px;
+  }
 
-    &__item {
-        height: 35px;
-        max-width: 200px;
-        text-align: center;
-        list-style-type: none;
-    }
+  &__list {
+    background-color: $primary-black;
+    height: 212px;
+    max-width: 205px;
+    padding: 0;
+    margin: 0;
+  }
 
-    &__item-active {
-        max-width: 205px;
-        background-color: white;
-    }
+  &__item {
+    height: 35px;
+    max-width: 200px;
+    text-align: center;
+    list-style-type: none;
+  }
 
-    &__link {
-        display: inline-block;
-        line-height: 35px;
-        color: white;
-        text-decoration: none;
-    }
+  &__item-active {
+    max-width: 205px;
+    background-color: white;
+  }
 
-    &__link-active {
-        color: $primary-black;
-        text-decoration: underline;
-    }
+  &__link {
+    display: inline-block;
+    line-height: 35px;
+    color: white;
+    text-decoration: none;
+  }
+
+  &__link-active {
+    color: $primary-black;
+    text-decoration: underline;
+  }
 }
 .burger-wrapper {
+  display: none;
+  position: relative;
+
+  @media (max-width: 375px) {
+    display: block;
+  }
+
+  #check-menu {
     display: none;
-    position: relative;
-    
-    @media(max-width: 375px){
-        display: block;
-    }
+  }
 
-    #check-menu {
-        
-        display: none;    
-    }
+  #check-menu:checked ~ .nav-burger {
+    max-height: 500px;
+  }
 
-    #check-menu:checked ~.nav-burger {
-        max-height: 500px;
-    }
+  #check-menu:checked ~ .first {
+    display: none;
+  }
 
-    #check-menu:checked ~.first {
-        display: none;
-    }
+  #check-menu:checked ~ .second {
+    transform: rotate(45deg);
+  }
 
-    #check-menu:checked ~.second {
-        transform: rotate(45deg);
-    }
+  #check-menu:checked ~ .third {
+    transform: rotate(-45deg);
+  }
 
-    #check-menu:checked ~.third {
-        transform: rotate(-45deg);
-    }
-
-    #check-menu:checked ~.fourth {
-        display: none;
-    }
+  #check-menu:checked ~ .fourth {
+    display: none;
+  }
 }
 .toggle-burger {
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    
-    width: 35px;
-    height: 35px;
-    
-    opacity: 0;
-    z-index: 2;
-  
+  position: absolute;
+  top: 10px;
+  left: 5px;
+
+  width: 35px;
+  height: 35px;
+
+  opacity: 0;
+  z-index: 2;
 }
 .burger-line {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 
-    height: 2px;
-    width: 30px;
-    background-color: $primary-black;
-
+  height: 2px;
+  width: 30px;
+  background-color: $primary-black;
 }
-.second, .third {
-    top: 25px;
-    left: 10px;
+.second,
+.third {
+  top: 25px;
+  left: 10px;
 }
 
 .fourth {
-    top: 38px;
+  top: 38px;
 }
 .nav-burger {
-    display: block;
-    position: absolute;
-    max-height: 0;
-    top: 40px;
-    left: 0px;
-    width: 210px;
-    height: 230px;
-    overflow: hidden;
-    transition: 0.7s all;
-    background-color: $primary-light-gray;
+  display: block;
+  position: absolute;
+  max-height: 0;
+  top: 50px;
+  left: 0px;
+  width: 210px;
+  height: 240px;
+  overflow: hidden;
+  transition: 0.7s all;
+  background-color: $primary-light-gray;
 }
 
 .burger-menu {
-		&__list {
-            padding: 0;
-            margin-left: 5px;
-            width: 200px;
-            height: 210px;
-            background-color: $primary-black;
-		}
+  &__list {
+    padding: 0;
+    margin-left: 5px;
+    width: 200px;
+    height: 210px;
+    background-color: $primary-black;
+  }
 
-		&__item {
-            height: 35px;
-            text-align: center;
-		}
+  &__item {
+    height: 35px;
+    text-align: center;
+  }
 
-		&__link {
-            display: block;
-            line-height: 35px;
-            color: white;
-            text-decoration: none;
-            width: 200px;
-		}
+  &__link {
+    display: block;
+    line-height: 35px;
+    color: white;
+    text-decoration: none;
+    width: 200px;
+  }
 
-		&__item-active {
-            background-color: white;
-		}
+  &__item-active {
+    background-color: white;
+  }
 
-        &__link-active {
-            color: $primary-black;
-            text-decoration: underline;
-        }
+  &__link-active {
+    color: $primary-black;
+    text-decoration: underline;
+  }
 }
 
 .info-content {
-    max-width: 560px;
+  flex: 0 1 72%;
 
-    &__wrapper {
-        margin: 0px 10px;
-    }
+  @media (max-width: 375px) {
+    flex: 0 1 auto;
+  }
+
+  &__wrapper {
+    margin: 0px 10px;
+  }
 }
 .main-info-container {
+  &__title {
+    font-weight: 400;
+    margin: 0 0 16px 0;
 
-    &__title {
-        font-weight: 400;
-        margin: 0 0 16px 0;
-
-        @media(max-width: 375px) {
-            margin: 10px 0 5px 45px;
-        }
+    @media (max-width: 375px) {
+      margin: 10px 0 5px 45px;
     }
+  }
 
-    &__text {
-        font-size: 12px;
-        margin: 20px 0;
-    }
+  &__text {
+    font-size: 12px;
+  }
 }
 .main-info-list {
-    &__title {
-        font-weight: 400;
-    }
+  &__title {
+    font-weight: 400;
+  }
 }
 
 .footer {
-    height: 25px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: $primary-black;
+  height: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: $primary-black;
 }
